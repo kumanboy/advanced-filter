@@ -1,8 +1,9 @@
+
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 import "./Nav.css";
 
-const Nav = ({ handleInputChange, query }) => {
+const Nav = ({ handleInputChange, query, favoriteCount, setShowFavorites }) => {
     return (
         <nav>
             <div className="nav-container">
@@ -15,9 +16,9 @@ const Nav = ({ handleInputChange, query }) => {
                 />
             </div>
             <div className="profile-container">
-                <a href="#">
-                    <FiHeart className="nav-icons" />
-                </a>
+                <button onClick={() => setShowFavorites((prev) => !prev)} className={`favorites-button`}>
+                    <FiHeart className="nav-icons" /> {favoriteCount > 0 && <span>({favoriteCount})</span>}
+                </button>
                 <a href="">
                     <AiOutlineShoppingCart className="nav-icons" />
                 </a>
@@ -28,5 +29,4 @@ const Nav = ({ handleInputChange, query }) => {
         </nav>
     );
 };
-
 export default Nav;

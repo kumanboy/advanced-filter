@@ -1,3 +1,5 @@
+/* Updated Nav.css */
+
 nav {
     display: flex;
     border-bottom: 2px solid #f3f3f3;
@@ -23,4 +25,16 @@ input {
     width: 1.5rem;
     height: 1.5rem;
     margin-left: 2rem;
+}
+
+/* Style for Favorites Button */
+.favorites-button {
+    align-items: center;
+    background: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
